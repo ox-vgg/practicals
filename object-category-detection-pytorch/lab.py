@@ -538,13 +538,13 @@ def nms(boxes, scores):
     "Return a tensor of boolean values with True for the boxes to retain"
     n = len(boxes)
     scores_ = scores.clone()
-    retain = torch.zeros(n).byte()
+    retain = torch.zeros(n, dtype=torch.bool)
     minf = torch.tensor(float('-inf'))
     while True:
         best, index = torch.max(scores_, 0)
         if best.item() <= float('-inf'):
             return boxes[retain], scores[retain], retain
-        retain[index] = 1
+        retain[index] = True
         collision = (box_overlap(boxes[index], boxes) > 0.5).reshape(-1)
         scores_= torch.where(collision, minf, scores_)    
 

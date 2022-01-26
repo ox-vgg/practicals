@@ -342,13 +342,13 @@ def flip_hog(hog):
 
 def load_data(meta_class='all'):
     imdb = torch.load('data/signs-data.pth')
-    if meta_class is 'prohibitory':
+    if meta_class == 'prohibitory':
         meta_labels = [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 15, 16]
-    elif meta_class is 'mandatory':
+    elif meta_class == 'mandatory':
         meta_labels = [33, 34, 35, 36, 37, 38, 39, 40]
-    elif meta_class is 'danger':
+    elif meta_class == 'danger':
         meta_labels = [11, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
-    elif meta_class is 'all':
+    elif meta_class == 'all':
         meta_labels = range(43)
     else:
         raise ValueError('The value of meta_label is not recognized.')

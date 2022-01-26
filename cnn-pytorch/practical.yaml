@@ -1,0 +1,15 @@
+name: practical
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - imagemagick
+  - jupyter
+  - matplotlib
+  - nbstripout
+  - numpy
+  - pillow
+  - pytorch=0.4.1
+  - requests
+  - torchvision=0.2.1

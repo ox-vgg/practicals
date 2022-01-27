@@ -4,11 +4,16 @@ import numpy as np
 import time
 import copy
 import torch
+import torch.cuda
 import torch.nn as nn
 import torch.nn.functional  as F
 import matplotlib
 from matplotlib import pyplot as plt
 from PIL import Image
+
+def select_random_gpu():
+    """Pick a random GPU (to distribute resources equally between students)."""
+    torch.cuda.set_device(random.choice(range(torch.cuda.device_count())))
 
 def reset_random_seeds(seed=0):
     random.seed(seed)

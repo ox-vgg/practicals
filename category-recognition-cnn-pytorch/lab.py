@@ -5,6 +5,7 @@ import random
 import requests
 import time
 import torch
+import torch.cuda
 import torch.nn as nn
 import torch.nn.functional  as F
 import torchvision
@@ -12,6 +13,10 @@ import numpy as np
 import matplotlib
 from PIL import Image
 from matplotlib import pyplot as plt
+
+def select_random_gpu():
+    """Pick a random GPU (to distribute resources equally between students)."""
+    torch.cuda.set_device(random.choice(range(torch.cuda.device_count())))
 
 def t2im(x):
     """Rearrange the N x K x H x W to have shape (NK) x 1 x H x W.

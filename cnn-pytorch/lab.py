@@ -224,7 +224,11 @@ def train_model(model, imdb, batch_size=100, num_epochs=15, use_gpu=False, jitte
     val_acc_log = []
 
     # Send model to GPU if needed
-    device = torch.device("cuda" if use_gpu else "cpu")
+    if use_gpu:
+        # Pick a random GPU (to distribute resources equally between students)
+        device = torch.device("cuda", random.choice(range(torch.cuda.device_count())))
+    else:
+        device = torch.device("cpu")
     model = model.to(device)
 
     for epoch in range(num_epochs):

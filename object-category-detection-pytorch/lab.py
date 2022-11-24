@@ -297,7 +297,11 @@ class HOGNet(nn.ModuleDict):
         model.weight.data = w
         
         # Send model to GPU if needed.
-        device = torch.device("cuda" if use_gpu else "cpu")
+        if use_gpu:
+            # Pick a random GPU (to distribute resources equally between students)
+            device = torch.device("cuda", random.choice(range(torch.cuda.device_count())))
+        else:
+            device = torch.device("cpu")
         hog_extractor_device = copy.deepcopy(self).to(device)
         model = model.to(device)
 

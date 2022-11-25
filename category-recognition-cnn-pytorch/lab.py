@@ -1,8 +1,7 @@
 import os
-import io
 import math
 import random
-import requests
+import urllib.request
 import time
 import torch
 import torch.cuda
@@ -467,8 +466,8 @@ class ImageCache():
 
     def add(self, url):
         "Add the image at `url` to the cache."
-        response = requests.get(url)
-        image_pil = Image.open(io.BytesIO(response.content))
+        response = urllib.request.urlopen(url)
+        image_pil = Image.open(response)
         image = self.model.normalize(image_pil)
         codes = self.model(image[None,:])
         self.cached[url] = {

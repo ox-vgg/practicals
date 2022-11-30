@@ -11,7 +11,8 @@
 ## image and set the password for the vgg user.
 ##
 ##   $ cd vg-practicals
-##   $ for PRACTICAL_NAME in category-recognition-cnn-pytorch \
+##   $ for PRACTICAL_NAME in ann-faiss \
+##   >                       category-recognition-cnn-pytorch \
 ##   >                       cnn-pytorch \
 ##   >                       object-category-detection-pytorch ; \
 ##   > do
@@ -56,6 +57,7 @@ RUN apt-get update \
                nodejs \
                npm \
                imagemagick \
+               libomp-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -76,6 +78,7 @@ RUN pip3 install --no-cache-dir \
 
 ## These are requirements for the practicals themselves.
 RUN pip3 install --no-cache-dir \
+         faiss \
          matplotlib \
          nbstripout \
          numpy \
@@ -88,6 +91,8 @@ RUN pip3 install --no-cache-dir \
 ## Instead of copying the whole data for each user, each gets a
 ## symlink to the data itself.  They need a copy of the notebook
 ## itself so they can make changes to it though.
+COPY "ann-faiss" \
+     "/srv/practicals/ann-faiss/"
 COPY "category-recognition-cnn-pytorch" \
      "/srv/practicals/category-recognition-cnn-pytorch/"
 COPY "cnn-pytorch" \
@@ -95,7 +100,8 @@ COPY "cnn-pytorch" \
 COPY "object-category-detection-pytorch" \
      "/srv/practicals/object-category-detection-pytorch/"
 
-RUN for PRACTICAL_NAME in category-recognition-cnn-pytorch \
+RUN for PRACTICAL_NAME in ann-faiss \
+                          category-recognition-cnn-pytorch \
                           cnn-pytorch \
                           object-category-detection-pytorch ; \
     do \

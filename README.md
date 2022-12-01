@@ -112,7 +112,7 @@ precision, and improving it using hard negative mining.
 - [data.tar.gz](https://thor.robots.ox.ac.uk/practicals/object-category-detection-pytorch-2018a/data.tar.gz)
 
 
-## Approximate Nearest Neighbour (ANN) Methods
+### Approximate Nearest Neighbour (ANN) Methods
 
 Compare exhaustive search to Approximate Nearest Neighbour (ANN)
 methods, namely Product Quantization (PQ) and Vector Quantization.

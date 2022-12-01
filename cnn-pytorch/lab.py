@@ -239,7 +239,7 @@ def train_model(model, imdb, batch_size=100, num_epochs=15, use_gpu=False, jitte
         val_items = 0
         val_loss = 0
         val_acc = 0
-        begin = time.clock()
+        begin = time.perf_counter()
         perm = np.random.permutation(train)
         num_iter = math.ceil(len(perm) / batch_size)
         for iter, batch in enumerate(get_batch(batch_size, perm)):
@@ -271,7 +271,7 @@ def train_model(model, imdb, batch_size=100, num_epochs=15, use_gpu=False, jitte
             if iter % print_period == 0:
                 print(f"epoch: {epoch+1:02d}/{num_epochs:02d}"
                  f" train iter: {iter+1:03d}/{num_iter:03d}"
-                 f" speed: {train_items / (time.clock() - begin):.1f} Hz"
+                 f" speed: {train_items / (time.perf_counter() - begin):.1f} Hz"
                  f" loss: {train_loss/train_items:.2f}"
                  f" acc: {100*train_acc/train_items:.1f}%")
 
@@ -302,7 +302,7 @@ def train_model(model, imdb, batch_size=100, num_epochs=15, use_gpu=False, jitte
             if iter % print_period == 0:
                 print(f"epoch: {epoch+1:02d}/{num_epochs:02d}"
                  f" val iter: {iter+1:03d}/{num_iter:03d}"
-                 f" speed: {train_items / (time.clock() - begin):.1f} Hz"
+                 f" speed: {train_items / (time.perf_counter() - begin):.1f} Hz"
                  f" loss: {val_loss/val_items:.2f}"
                  f" acc: {100*val_acc/val_items:.1f}%")
 

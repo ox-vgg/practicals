@@ -21,13 +21,19 @@ files separately and extract them.  Like so:
         https://thor.robots.ox.ac.uk/practicals/cnn-pytorch-2018a/data.tar.gz
     wget --output-document category-recognition-cnn-pytorch/data.tar.gz \
         https://thor.robots.ox.ac.uk/practicals/category-recognition-cnn-pytorch-2018a/data.tar.gz
+    wget --output-document ann-faiss/data.tar.gz \
+        https://thor.robots.ox.ac.uk/practicals/ann-faiss-2021/data.tar.gz
     wget --output-document object-category-detection-pytorch/data.tar.gz \
         https://thor.robots.ox.ac.uk/practicals/object-category-detection-pytorch-2018a/data.tar.gz
     md5sum --check << END_CHECKSUMS
+    b23d1b3b2ee8469d819b61ca900ef0ed  ann-faiss/data.tar.gz
     258678bbc6f0866f07325d1de965fe7f  category-recognition-cnn-pytorch/data.tar.gz
     dcdafa436450f136052d418377c7171f  cnn-pytorch/data.tar.gz
     029cbcef119006ab90e48c72147e163d  object-category-detection-pytorch/data.tar.gz
     END_CHECKSUMS
+    tar --extract --gzip \
+        --directory ann-faiss \
+        --file ann-faiss/data.tar.gz
     tar --extract --gzip \
         --directory category-recognition-cnn-pytorch \
         --file category-recognition-cnn-pytorch/data.tar.gz
@@ -104,3 +110,11 @@ operating at multiple scales, evaluating a detector using average
 precision, and improving it using hard negative mining.
 
 - [data.tar.gz](https://thor.robots.ox.ac.uk/practicals/object-category-detection-pytorch-2018a/data.tar.gz)
+
+
+## Approximate Nearest Neighbour (ANN) Methods
+
+Compare exhaustive search to Approximate Nearest Neighbour (ANN)
+methods, namely Product Quantization (PQ) and Vector Quantization.
+
+- [data.tar.gz](https://thor.robots.ox.ac.uk/practicals/ann-faiss-2021/data.tar.gz)

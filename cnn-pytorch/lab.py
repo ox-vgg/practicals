@@ -115,7 +115,7 @@ def extract_black_blobs(im):
     with torch.no_grad():
         score = hessiandet(im)
         ismax = (score == F.max_pool2d(score, 3, padding=1, stride=1)) * (score > 3e-4)
-        pos = torch.tensor(ismax, dtype=torch.float32)
+        pos = ismax.float().clone().detach()
         neg = 1 - F.max_pool2d(pos, 7, padding=3, stride=1)
         indices = np.where(pos.numpy().squeeze() > 0)
 

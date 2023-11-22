@@ -291,11 +291,13 @@ def get_encoder_cnn():
     "Get the encoder neural network model."
     model_path = os.path.join('data', 'alexnet.pth')
     if not os.path.exists(model_path):
-        alexnet = torchvision.models.alexnet(pretrained=True)
+        alexnet = torchvision.models.alexnet(
+            weights=torchvision.models.AlexNet_Weights.IMAGENET1K_V1
+        )
         torch.save(alexnet.state_dict(), model_path)
-    alexnet = torchvision.models.alexnet(pretrained=False)
+    alexnet = torchvision.models.alexnet(weights=None)
     alexnet.load_state_dict(torch.load(model_path))
-    model = Encoder(alexnet) 
+    model = Encoder(alexnet)
     return model
 
 def get_codes(layer=7):

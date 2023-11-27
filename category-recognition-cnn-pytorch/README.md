@@ -1,8 +1,28 @@
-Object category recognition practical (PyTorch version)
+Image classification practical (PyTorch version)
 =======================================================
 
 > A computer vision practical by the Oxford Visual Geometry group,
 > authored by Andrea Vedaldi and Andrew Zisserman.
+
+Learn how to tell if an image contains an object of a certain class
+(e.g. a dog, a mountain, or a person).  The challenge is to be
+invariant to irrelevant factors such as viewpoint and illumination as
+well as to the differences between objects (no two mountains look
+exactly the same).  The practical covers using various deep
+convolutional neural networks (CNNs) to extract image features,
+learning an SVM classifier for five different object classes
+(airplanes, motorbikes, people, horses and cars), assessing its
+performance using precision-recall curves, and training a new
+classifiers from data collected using Internet images.
+
+
+Data
+----
+
+The following data files are used by this practical:
+
+- [data.tar.gz](https://thor.robots.ox.ac.uk/practicals/category-recognition-cnn-pytorch-2018a/data.tar.gz)
+
 
 Running the practical on your local machine
 -------------------------------------------
@@ -21,7 +41,7 @@ Running the practical on your local machine
 
         jupyter notebook practical.yaml
 
-        
+
 Package contents
 ----------------
 
@@ -39,7 +59,7 @@ Appendix: Installing from scratch
 *   Install and setup PyTorch as explained above.
 
 *   For **developers**, it is also recommended to install the `nbstripout` command:
-        
+
         nbstripout --install
 
     In this manner Git can strip the output data from the iPython notebook before checking in.

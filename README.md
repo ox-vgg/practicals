@@ -9,6 +9,12 @@ to run the practicals, either on your own machine, or [Google
 Colab](https://colab.research.google.com/) or similar.
 
 
+## The practicals
+
+Each directory is a stand-alone practical session.  See their own
+`README` files for the details of each of them.
+
+
 ## Running locally
 
 The practicals are Jupyter Notebooks and therefore you will need to
@@ -64,61 +70,3 @@ At VGG we setup these on a [JupyterHub](https://jupyter.org/hub)
 instance in a docker container running in our own servers for our
 students.  The `Dockerfile` in this repository can be used to recreate
 the same setup elsewhere.
-
-
-## The practicals
-
-### Convolutional neural networks
-
-Learn to use convolutional neural networks (CNNs), an important class
-of learnable representations applicable to numerous computer vision
-problems and are the main method for feature extraction in image
-understanding.  This practical explores the basic CNN building blocks
-(linear filters and ReLU), back-propagation, learning CNNs to detect
-particular image structures as well as typewritten characters (using a
-variety of different fonts), and using stochastic gradient descent
-with momentum, mini-batches, and data augmentation.
-
-- [data.tar.gz](https://thor.robots.ox.ac.uk/practicals/cnn-pytorch-2018a/data.tar.gz)
-
-
-### Image classification
-
-Learn how to tell if an image contains an object of a certain class
-(e.g. a dog, a mountain, or a person).  The challenge is to be
-invariant to irrelevant factors such as viewpoint and illumination as
-well as to the differences between objects (no two mountains look
-exactly the same).  The practical covers using various deep
-convolutional neural networks (CNNs) to extract image features,
-learning an SVM classifier for five different object classes
-(airplanes, motorbikes, people, horses and cars), assessing its
-performance using precision-recall curves, and training a new
-classifiers from data collected using Internet images.
-
-- [data.tar.gz](https://thor.robots.ox.ac.uk/practicals/category-recognition-cnn-pytorch-2018a/data.tar.gz)
-
-
-### Object detection
-
-Learn to detect objects such as pedestrian, cars, traffic signs, in an
-image.  The challenge is to not only recognize but also localize
-objects in images, as well as to enumerate their occurrences,
-regardless changes in location, scale, illumination, articulation, and
-many other factors.  The practical covers using HOG features to
-describe image regions, building a sliding-window SVM object detector,
-operating at multiple scales, evaluating a detector using average
-precision, and improving it using hard negative mining.
-
-- [data.tar.gz](https://thor.robots.ox.ac.uk/practicals/object-category-detection-pytorch-2018a/data.tar.gz)
-
-
-### Approximate Nearest Neighbour (ANN) Methods
-
-This short practical focuses on different Approximate Nearest
-Neighbour (ANN) methods, which are used for search and retrieval
-systems that handle high-dimensional data such as images and sound.
-The practical covers Product Quantization (PQ) and Vector Quantization
-(VQ), and allows experimenting with different trade-offs of memory,
-speed, and search accuracy.
-
-- [data.tar.gz](https://thor.robots.ox.ac.uk/practicals/ann-faiss-2021/data.tar.gz)

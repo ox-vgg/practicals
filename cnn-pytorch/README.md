@@ -1,8 +1,26 @@
 Convolutional neural network practical (PyTorch version)
 ========================================================
 
-A computer vision practical by the Oxford Visual Geometry group,
-authored by Andrea Vedaldi and Andrew Zisserman.
+> A computer vision practical by the Oxford Visual Geometry group,
+> authored by Andrea Vedaldi and Andrew Zisserman.
+
+Learn to use convolutional neural networks (CNNs), an important class
+of learnable representations applicable to numerous computer vision
+problems and are the main method for feature extraction in image
+understanding.  This practical explores the basic CNN building blocks
+(linear filters and ReLU), back-propagation, learning CNNs to detect
+particular image structures as well as typewritten characters (using a
+variety of different fonts), and using stochastic gradient descent
+with momentum, mini-batches, and data augmentation.
+
+
+Data
+----
+
+The following data files are used by this practical:
+
+- [data.tar.gz](https://thor.robots.ox.ac.uk/practicals/cnn-pytorch-2018a/data.tar.gz)
+
 
 Running the practical on your local machine
 -------------------------------------------
@@ -27,7 +45,7 @@ Appendix: Installing from scratch
 *   Install and setup PyTorch as explained above.
 
 *   For **developers**, it is also recommended to install the `nbstripout` command:
-        
+
         nbstripout --install
 
     In this manner Git can strip the output data from the iPython notebook before checking in.
@@ -69,7 +87,7 @@ pre-built binaries, but MatConvNet does not.
 4. Run `python -m extra.pack_fonts`. This will create `data/charsdb.pth`.
 5. Run `python -m extra.pretrain_models`. This will create `data/model*.pth` and `data/alexnet.pth`.
 
-For developers, it is also recommended to install the `nbstripout` command 
+For developers, it is also recommended to install the `nbstripout` command
 in git using `nbstripout --install`.
 
 Changes
@@ -83,7 +101,7 @@ License
 -------
 
     Copyright (c) 2015-18 Andrea Vedaldi and Andrew Zisserman.
-    
+
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
     files (the "Software"), to deal in the Software without
@@ -91,10 +109,10 @@ License
     modify, merge, publish, distribute, sublicense, and/or sell copies
     of the Software, and to permit persons to whom the Software is
     furnished to do so, subject to the following conditions:
-    
+
     The above copyright notice and this permission notice shall be
     included in all copies or substantial portions of the Software.
-    
+
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
     EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
     MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND

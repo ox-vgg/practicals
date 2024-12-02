@@ -296,13 +296,16 @@ def get_encoder_cnn():
         )
         torch.save(alexnet.state_dict(), model_path)
     alexnet = torchvision.models.alexnet(weights=None)
-    alexnet.load_state_dict(torch.load(model_path))
+    alexnet.load_state_dict(torch.load(model_path, weights_only=True))
     model = Encoder(alexnet)
     return model
 
 def get_codes(layer=7):
     "Get the codes for an image in `imdb` and the specified `layer`."
-    data = torch.load(os.path.join('data', f"conv{layer}.pth"))
+    data = torch.load(
+        os.path.join('data', f"conv{layer}.pth"),
+        weights_only=True
+    )
     return data['codes']
 
 def get_image(imdb, index):

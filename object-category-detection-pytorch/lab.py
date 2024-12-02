@@ -350,7 +350,7 @@ def flip_hog(hog):
     return hog[:,perm,:,:].flip(3)
 
 def load_data(meta_class='all'):
-    imdb = torch.load('data/signs-data.pth')
+    imdb = torch.load('data/signs-data.pth', weights_only=True)
     if meta_class == 'prohibitory':
         meta_labels = [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 15, 16]
     elif meta_class == 'mandatory':

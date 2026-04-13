@@ -13,6 +13,8 @@ particular image structures as well as typewritten characters (using a
 variety of different fonts), and using stochastic gradient descent
 with momentum, mini-batches, and data augmentation.
 
+[![Open In
+  Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/cnn-pytorch/practical.ipynb)
 
 Data
 ----

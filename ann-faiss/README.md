@@ -7,6 +7,9 @@ The practical covers Product Quantization (PQ) and Vector Quantization
 (VQ), and allows experimenting with different trade-offs of memory,
 speed, and search accuracy.
 
+[![Open In
+  Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/ann-faiss/practical.ipynb)
+
 
 Data
 ----

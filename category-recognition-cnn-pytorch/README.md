@@ -15,6 +15,8 @@ learning an SVM classifier for five different object classes
 performance using precision-recall curves, and training a new
 classifiers from data collected using Internet images.
 
+[![Open In
+  Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/category-recognition-cnn-pytorch/practical.ipynb)
 
 Data
 ----

@@ -10,6 +10,9 @@ describe image regions, building a sliding-window SVM object detector,
 operating at multiple scales, evaluating a detector using average
 precision, and improving it using hard negative mining.
 
+[![Open In
+  Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/object-category-detection-pytorch/practical.ipynb)
+
 
 Data
 ----

@@ -2,18 +2,46 @@
 
 The Oxford [Visual Geomery Group](http://www.robots.ox.ac.uk/~vgg)
 Computer Vision Practicals is a collection of PyTorch-based hands-on
-experiences introducing fundamental concepts in image understanding.
+experiences introducing fundamental concepts in computer vision.
 
-This repository includes the [Jupyter Notebooks]https://jupyter.org/)
-to run the practicals, either on your own machine, or [Google
-Colab](https://colab.research.google.com/) or similar.
+This repository includes the [Jupyter Notebooks](https://jupyter.org/)
+to run the practicals, either on your own machine, [Google
+Colab](https://colab.research.google.com/), or similar.
 
 
 ## The practicals
 
 Each directory is a stand-alone practical session.  See their own
-`README` files for the details of each of them.
+`README` files for details.
 
+- [**Convolutional Neural Networks (CNN)**](./cnn-pytorch): Learn to
+  use convolutional neural networks (CNNs), an important class of
+  learnable representations applicable to numerous computer vision
+  problems and are the main method for feature extraction in image
+  understanding.
+
+- [**Image classification**](./category-recognition-cnn-pytorch):
+  Learn how to tell if an image contains an object of a certain class
+  (e.g. a dog, a mountain, or a person).  The challenge is to be
+  invariant to irrelevant factors such as viewpoint and illumination
+  as well as to the differences between objects (no two mountains look
+  exactly the same).
+
+- [**Object Detection**](./object-category-detection-pytorch): Learn
+  to detect objects such as pedestrian, cars, traffic signs, in an
+  image.  The challenge is to not only recognize but also localize
+  objects in images, as well as to enumerate their occurrences,
+  regardless changes in location, scale, illumination, articulation,
+  and many other factors.
+
+- [**Approximate Nearest Neighbour (ANN) Methods**](./ann-faiss): This
+  short practical focuses on different Approximate Nearest Neighbour
+  (ANN) methods, which are used for search and retrieval systems that
+  handle high-dimensional data such as images and sound.
+
+- [**Vision Transformers**](./vision-transformers): This practical
+  introduces Vision Transformers (ViTs) and explores their role in
+  modern computer vision.
 
 ## Running locally
 

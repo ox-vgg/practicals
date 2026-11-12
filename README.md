@@ -53,7 +53,7 @@ Each directory is a stand-alone practical session.  See their own
    view, and experience temporary occlusion.
 
 
-### Classics
+### Older Practicals
 
 These practicals are no longer maintained but remain interesting.
 They explore influential approaches to computer vision and although

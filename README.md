@@ -14,7 +14,7 @@ Colab](https://colab.research.google.com/), or similar.
 Each directory is a stand-alone practical session.  See their own
 `README` files for details.
 
-1. [**Image classification**](./category-recognition-cnn-pytorch)
+1. [**Image Classification and Retrieval**](./category-recognition-cnn-pytorch)
    [![Open In
    Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/category-recognition-cnn-pytorch/practical.ipynb)
 

@@ -1,5 +1,5 @@
-Image classification practical (PyTorch version)
-=======================================================
+Image Classification and Retrieval practical (PyTorch version)
+==============================================================
 
 > A computer vision practical by the Oxford Visual Geometry group,
 > authored by Andrea Vedaldi and Andrew Zisserman.

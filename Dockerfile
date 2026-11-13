@@ -13,7 +13,7 @@
 ##   $ cd vg-practicals
 ##   $ for PRACTICAL_NAME in ann-faiss \
 ##   >                       category-recognition-cnn-pytorch \
-##   >                       cnn-pytorch \
+##   >                       cnn \
 ##   >                       object-category-detection-pytorch ; \
 ##   > do
 ##   >   tar xzf ${PRACTICAL_NAME}/datar.tar.gz -C $PRACTICAL_NAME
@@ -95,14 +95,14 @@ COPY "ann-faiss" \
      "/srv/practicals/ann-faiss/"
 COPY "category-recognition-cnn-pytorch" \
      "/srv/practicals/category-recognition-cnn-pytorch/"
-COPY "cnn-pytorch" \
-     "/srv/practicals/cnn-pytorch/"
+COPY "cnn" \
+     "/srv/practicals/cnn/"
 COPY "object-category-detection-pytorch" \
      "/srv/practicals/object-category-detection-pytorch/"
 
 RUN for PRACTICAL_NAME in ann-faiss \
                           category-recognition-cnn-pytorch \
-                          cnn-pytorch \
+                          cnn \
                           object-category-detection-pytorch ; \
     do \
         mkdir /etc/skel/${PRACTICAL_NAME} ; \

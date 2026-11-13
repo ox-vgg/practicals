@@ -14,7 +14,7 @@ variety of different fonts), and using stochastic gradient descent
 with momentum, mini-batches, and data augmentation.
 
 [![Open In
-  Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/cnn-pytorch/practical.ipynb)
+  Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/cnn/practical.ipynb)
 
 Data
 ----

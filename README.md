@@ -26,14 +26,14 @@ Each directory is a stand-alone practical session.  See their own
 
 2. [**Vision Transformers**](./vision-transformers)
    [![Open In
-   Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/category-recognition-cnn-pytorch/practical.ipynb)
+   Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/vision-transformers/practical.ipynb)
 
    This practical introduces Vision Transformers (ViTs) and explores
    their role in modern computer vision.
 
 3. [**Approximate Nearest Neighbour (ANN) Methods**](./ann-faiss)
    [![Open In
-   Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/category-recognition-cnn-pytorch/practical.ipynb)
+   Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/ann-faiss/practical.ipynb)
 
    This short practical focuses on different Approximate Nearest
    Neighbour (ANN) methods, which are used for search and retrieval
@@ -61,9 +61,9 @@ many have been superseded they remain valuable for understanding the
 evolution of the field and the principles behind modern computer
 vision systems.
 
-- [**Convolutional Neural Networks (CNN)**](./cnn-pytorch)
+- [**Convolutional Neural Networks (CNN)**](./cnn)
    [![Open In
-   Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/cnn-pytorch/practical.ipynb)
+   Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ox-vgg/practicals/blob/main/cnn/practical.ipynb)
 
   Learn to use convolutional neural networks (CNNs), an important
   class of learnable representations applicable to numerous computer
@@ -89,7 +89,7 @@ The practicals are Jupyter Notebooks and therefore you will need to
 In addition, to run these practicals, you need to download the data
 files separately and extract them.  Like so:
 
-    wget --output-document cnn-pytorch/data.tar.gz \
+    wget --output-document cnn/data.tar.gz \
         https://thor.robots.ox.ac.uk/practicals/cnn-pytorch-2018a/data.tar.gz
     wget --output-document category-recognition-cnn-pytorch/data.tar.gz \
         https://thor.robots.ox.ac.uk/practicals/category-recognition-cnn-pytorch-2018a/data.tar.gz
@@ -100,7 +100,7 @@ files separately and extract them.  Like so:
     md5sum --check << END_CHECKSUMS
     b23d1b3b2ee8469d819b61ca900ef0ed  ann-faiss/data.tar.gz
     258678bbc6f0866f07325d1de965fe7f  category-recognition-cnn-pytorch/data.tar.gz
-    dcdafa436450f136052d418377c7171f  cnn-pytorch/data.tar.gz
+    dcdafa436450f136052d418377c7171f  cnn/data.tar.gz
     029cbcef119006ab90e48c72147e163d  object-category-detection-pytorch/data.tar.gz
     END_CHECKSUMS
     tar --extract --gzip \
@@ -110,8 +110,8 @@ files separately and extract them.  Like so:
         --directory category-recognition-cnn-pytorch \
         --file category-recognition-cnn-pytorch/data.tar.gz
     tar --extract --gzip \
-        --directory cnn-pytorch \
-        --file cnn-pytorch/data.tar.gz
+        --directory cnn \
+        --file cnn/data.tar.gz
     tar --extract --gzip \
         --directory object-category-detection-pytorch \
         --file object-category-detection-pytorch/data.tar.gz
